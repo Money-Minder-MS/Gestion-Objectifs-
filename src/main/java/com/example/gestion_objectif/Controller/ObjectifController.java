@@ -31,6 +31,12 @@ public class ObjectifController {
         return objectifService.afficherParId(id);
     }
 
+    // Récupérer tous les objectifs d'un user
+    @GetMapping("/byuser/{userId}")
+    public List<Objectif> afficherParUserId(@PathVariable Long userId) {
+        return objectifService.afficherParUserId(userId);
+    }
+
     @PutMapping("/update")
     public Objectif modifier(@RequestBody Objectif objectif) {
         return objectifService.modifier(objectif);

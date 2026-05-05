@@ -14,4 +14,7 @@ public interface ObjectifRepository extends JpaRepository<Objectif, Long> {
 
     // Trouver les objectifs d'une catégorie
     List<Objectif> findByCategorieId(Long categorieId);
+
+    // Trouver les objectifs d'un user
+    List<Objectif> findByUserId(Long userId);
 }
